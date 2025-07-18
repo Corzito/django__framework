@@ -1,0 +1,42 @@
+
+{% extends "master.html" %}
+
+{% block title %}
+  Details about {{ mymember.firstname }} {{ mymember.lastname }}
+{% endblock %}
+
+{% block content %}
+  <div class="container">
+    <h1>{{ mymember.firstname }} {{ mymember.lastname }}</h1>
+    
+    <div class="info-box">
+      <span class="info-label">Phone</span>
+      <span class="info-value">{{ mymember.phone }}</span>
+    </div>
+    
+    <div class="info-box">
+      <span class="info-label">Member Sinces:</span>
+      <span class="info-value">{{ mymember.joined_date }}</span>
+    </div>
+    
+    <div class="info-box">
+      <span class="info-label">Email:</span>
+      <span class="info-value">{{ mymember.email }}</span>
+    </div>
+    
+    <div class="info-box">
+      <span class="info-label">Birth_date</span>
+      <span class="info-value">{{ mymember.birth_date }}</span>
+    </div>
+    
+    <div class="info-box">
+      <span class="info-label">Gender</span>
+      <span class="info-value">{{ mymember.gender }}</span>
+    </div>
+    
+    
+    <div class="actions">
+      <a href="/members" class="btn-back">← Volver a Miembros</a>
+    </div>
+  </div>
+{% endblock %}
