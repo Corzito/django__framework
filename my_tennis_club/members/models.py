@@ -8,4 +8,5 @@ class Member(models.Model):
   gender = models.CharField(max_length=255, null=True)
   email = models.EmailField(max_length=255, null=True)
   birth_date = models.DateField(null=True)
-  
+  def __str__(self):
+    return f"{self.firstname} {self.lastname}"
